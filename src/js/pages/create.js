@@ -45,7 +45,7 @@ const handleSubmit = async (event) => {
   // post edited notes
   await requestNotes('/notes', 'POST', requestBody);
   // redirect to home page
-  window.location.href = '../../notion/index.html';
+  window.location.href = '../../../index.html';
 };
 
 const loadNote = async () => {

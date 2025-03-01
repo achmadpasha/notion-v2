@@ -31,7 +31,7 @@ else { // otherwise, display the notes
     const noteItem = document.createElement('note-item');
     noteItem.setAttribute('class', 'flex bg-gray-100 rounded-xl shadowm-sm');
     const a = document.createElement('a');
-    a.setAttribute('href', 'notes/index.html');
+    a.setAttribute('href', 'src/notion/notes/index.html');
     a.setAttribute('class', 'flex flex-col w-full p-4 rounded-xl rounded-e-none transition-all duration-200 ease-out hover:bg-gray-200');
     a.innerHTML = `
       <h3 class="text-gray-800 text-sm font-semibold line-clamp-2 lg:text-base">${note.title}</h3>

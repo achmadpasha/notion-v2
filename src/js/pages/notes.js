@@ -38,7 +38,7 @@ if (data === undefined || data === null) {
   // if data archived equal to false
   if (data.archived === false) {
     // change the link on back button to home page
-    back.setAttribute('href', '../index.html')
+    back.setAttribute('href', '../../../index.html')
     archive.innerText = 'Archive';
     // if archive button clicked, archive the notes
     archive.onclick = async () => {
@@ -64,7 +64,7 @@ if (data === undefined || data === null) {
     if (isDelete) {
       await requestNotes(`/notes/${noteId}`, 'DELETE');
       // redirect to home page
-      window.location.href = '../../notion/index.html';
+      window.location.href = '../../../index.html';
     }
   };
 }
