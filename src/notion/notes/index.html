@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Notion</title>
+</head>
+<body class="font-[Poppins]">
+
+  <div class="relative">
+    <header class="absolute left-0 right-0 bg-none border-b border-gray-100">
+      <nav-bar>
+        <nav-left>
+          <a href="../index.html" id="back" class="inline-flex px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-gray-200">
+            <div class="inline-flex size-[10px] border-s-2 border-b-2 border-gray-800 rotate-45 translate-x-[2px] translate-y-[2.5px]"></div>
+            <span class="ms-2 text-gray-800 text-xs font-medium">Back</span>
+          </a>
+        </nav-left>
+        <nav-right>
+          <a href="../create/index.html" id="edit" class="text-gray-800 text-xs font-medium px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-gray-200">Edit</a>
+          <a href="../index.html" id="archive" class="text-gray-800 text-xs font-medium px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-gray-200">Archive</a>
+          <a href="../index.html" id="delete" class="text-red-600 text-xs font-medium px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-red-100">Delete</a>
+        </nav-right>
+      </nav-bar>
+    </header>
+
+    <main class="container mx-auto p-5 pt-[100px] min-h-dvh">
+      <loading-ping></loading-ping>
+      <article class="text-gray-800">
+        <h3 id="title" class="text-2xl font-semibold"></h3>
+        <p id="body" class="mt-2 text-sm"></p>
+      </article>
+    </main>
+  </div>
+
+  <script type="module" src="../../../dist/notes.bundle.js"></script>
+
+</body>
+</html>
