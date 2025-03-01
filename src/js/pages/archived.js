@@ -29,13 +29,13 @@ else { // otherwise, display the notes
   data.forEach((note) => {
     // create notes card
     const noteItem = document.createElement('note-item');
-    noteItem.setAttribute('class', 'flex bg-gray-100 rounded-xl shadowm-sm');
+    noteItem.setAttribute('class', 'grid grid-cols-7 min-[580px]:grid-cols-8 bg-gray-100 rounded-xl shadowm-sm');
     const a = document.createElement('a');
     a.setAttribute('href', '../notes/index.html');
-    a.setAttribute('class', 'flex flex-col w-full p-4 rounded-xl rounded-e-none transition-all duration-200 ease-out hover:bg-gray-200');
+    a.setAttribute('class', 'col-span-6 min-[580px]:col-span-7 flex flex-col p-4 rounded-xl rounded-e-none transition-all duration-200 ease-out hover:bg-gray-200');
     a.innerHTML = `
-      <h3 class="text-gray-800 text-sm font-semibold line-clamp-2 lg:text-base">${note.title}</h3>
-      <p class="mt-1 text-gray-400 text-xs line-clamp-5 lg:text-sm">${formatText(note.body)}</p>
+      <h3 class="text-gray-800 text-sm font-semibold text-clamp-2 lg:text-base">${note.title}</h3>
+      <p class="mt-1 text-gray-400 text-xs text-clamp-5 lg:text-sm">${formatText(note.body)}</p>
     `;
 
     // if notes clicked, send notes id on 'note-page-id' key
@@ -43,8 +43,9 @@ else { // otherwise, display the notes
 
     // create unarchive button on the notes
     const unarchive = document.createElement('button');
-    unarchive.setAttribute('class', 'px-3 text-lg bg-gray-200 rounded-xl rounded-s-none transition-all duration-200 ease-out hover:bg-gray-300');
+    unarchive.setAttribute('type', 'button');
     unarchive.setAttribute('title', 'Unarchive');
+    unarchive.setAttribute('class', 'text-lg bg-gray-200 rounded-xl rounded-s-none transition-all duration-200 ease-out hover:bg-gray-300');
     unarchive.innerText = '📤';
 
     // if unarchive button clicked, unarchive the notes

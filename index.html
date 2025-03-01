@@ -8,7 +8,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
+  <style>
+    .text-clamp-2 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      align-self: stretch;
+      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+      overflow: hidden;
+    }
+
+    .text-clamp-5 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      align-self: stretch;
+      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+      overflow: hidden;
+    }
+  </style>
+
   <title>Notion</title>
 </head>
 <body class="font-[Poppins]">
@@ -28,7 +50,7 @@
       </nav-bar>
     </header>
 
-    <main>
+    <main class="container mx-auto p-5 pt-[100px] min-h-dvh">
       <loading-ping></loading-ping>
     </main>
   </div>
