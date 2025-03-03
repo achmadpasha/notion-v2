@@ -1,7 +1,7 @@
 import '../components/navbar.js';
 import '../components/notes.js';
 import '../components/loader.js';
-import { formatText } from '../utils/utils.js';
+import { formatText } from '../utils.js';
 import requestNotes from '../services/request.js';
 
 const container = document.querySelector('main');
@@ -31,7 +31,7 @@ else { // otherwise, display the notes
     const noteItem = document.createElement('note-item');
     noteItem.setAttribute('class', 'grid grid-cols-7 min-[580px]:grid-cols-8 bg-gray-100 rounded-xl shadowm-sm');
     const a = document.createElement('a');
-    a.setAttribute('href', 'src/notion/notes/index.html');
+    a.setAttribute('href', 'notes.html');
     a.setAttribute('class', 'col-span-6 min-[580px]:col-span-7 flex flex-col p-4 rounded-xl rounded-e-none transition-all duration-200 ease-out hover:bg-gray-200');
     a.innerHTML = `
       <h3 class="text-gray-800 text-sm font-semibold text-clamp-2 lg:text-base">${note.title}</h3>

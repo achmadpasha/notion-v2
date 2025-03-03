@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry:  {
@@ -11,4 +12,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: 'index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/archived/index.html',
+      filename: 'archived.html',
+      chunks: ['archived']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/notes/index.html',
+      filename: 'notes.html',
+      chunks: ['notes']
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/create/index.html',
+      filename: 'create.html',
+      chunks: ['create']
+    })
+  ],
 };

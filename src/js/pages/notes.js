@@ -1,6 +1,6 @@
 import '../components/navbar.js';
 import '../components/loader.js';
-import { formatText } from '../utils/utils.js';
+import { formatText } from '../utils.js';
 import requestNotes from '../services/request.js';
 
 const title = document.querySelector('#title');
@@ -38,7 +38,7 @@ if (data === undefined || data === null) {
   // if data archived equal to false
   if (data.archived === false) {
     // change the link on back button to home page
-    back.setAttribute('href', '../../../index.html')
+    back.setAttribute('href', 'index.html')
     archive.innerText = 'Archive';
     // if archive button clicked, archive the notes
     archive.onclick = async () => {
@@ -46,7 +46,7 @@ if (data === undefined || data === null) {
     };
   } else { // otherwise
     // change the link on back button to archived page
-    back.setAttribute('href', '../archived/index.html')
+    back.setAttribute('href', 'archived.html')
     archive.innerText = 'Unarchive';
     // if unarchived button clicked, unarchive the notes
     archive.onclick = async () => {
@@ -64,7 +64,7 @@ if (data === undefined || data === null) {
     if (isDelete) {
       await requestNotes(`/notes/${noteId}`, 'DELETE');
       // redirect to home page
-      window.location.href = '../../../index.html';
+      window.location.href = 'index.html';
     }
   };
 }

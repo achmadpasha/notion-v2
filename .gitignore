@@ -1,2 +1,18 @@
+### IDE
+.idea
+.vscode
+
+### Node
+# logs
+logs
+*.log
+npm-debug.log*
+
 # Dependency directories
 node_modules/
+
+# Optional npm cache directory
+.npm
+
+### Additional directories
+dist

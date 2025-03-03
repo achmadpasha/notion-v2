@@ -27,7 +27,7 @@
     <header class="absolute left-0 right-0 bg-none border-b border-gray-100">
       <nav-bar>
         <nav-left>
-          <a href="../../../index.html" class="inline-flex px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-gray-200">
+          <a href="index.html" class="inline-flex px-3 py-[11px] rounded-full transition-all duration-300 ease-out hover:bg-gray-200">
             <div class="inline-flex size-[10px] border-s-2 border-b-2 border-gray-800 rotate-45 translate-x-[2px] translate-y-[2.5px]"></div>
             <span class="ms-2 text-gray-800 text-xs font-medium">Back</span>
           </a>
@@ -40,15 +40,13 @@
 
     <main class="container mx-auto p-5 pt-[100px] h-dvh max-h-dvh">
       <loading-ping class="hidden"></loading-ping>
-      <form action="../../../index.html" id="form-notes" class="flex flex-col h-full">
+      <form action="index.html" id="form-notes" class="flex flex-col h-full">
         <input type="text" name="title" id="input-title" class="h-fit text-2xl font-semibold border-b border-transparent transition-all duration-300 ease-out focus:py-2 focus:border-zinc-100" placeholder="Untitled" autofocus autocomplete="off">
         <span id="char-count" class="self-end text-gray-300 text-xs font-semibold opacity-0 origin-top -translate-y-[8px] transition-all duration-300 ease-out">0/120</span>
         <textarea name="body" id="input-body" class="h-full text-sm focus:outline-none" placeholder="Start writing..."></textarea>
       </form>
     </main>
   </div>
-
-  <script type="module" src="../../../dist/create.bundle.js"></script>
 
 </body>
 </html>
