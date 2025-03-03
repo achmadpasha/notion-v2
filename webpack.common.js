@@ -8,7 +8,7 @@ module.exports = {
     create: './src/js/pages/create.js'
   },
   output: {
-    path: path.resolve(__dirname, 'bundle'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   },
 };
